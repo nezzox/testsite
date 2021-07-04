@@ -1,0 +1,684 @@
+{
+  "settings": {
+    "name": "Massage Terapeuten",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "organicamp",
+      "title": "OrganicAMP",
+      "styling": {
+        "primaryColor": "#bee0c7",
+        "secondaryColor": "#bee0c7",
+        "successColor": "#57e3b5",
+        "infoColor": "#5acda6",
+        "warningColor": "#8b8b99",
+        "dangerColor": "#767676",
+        "mainFont": "Poppins",
+        "display1Font": "Poppins",
+        "display1Size": 2.25,
+        "display2Font": "Poppins",
+        "display2Size": 1.5,
+        "display5Font": "Caveat",
+        "display5Size": 1.5,
+        "display6Font": "Poppins",
+        "display6Size": 1.125,
+        "display7Font": "Poppins",
+        "display7Size": 0.875,
+        "display4Font": "Poppins",
+        "display4Size": 0.75,
+        "isRoundedButtons": true,
+        "isScrollToTopButton": true,
+        "arrowColor": "#bee0c7"
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.3.10",
+    "siteFonts": [],
+    "imageResize": true,
+    "favicon": "@PROJECT_PATH@/assets/images/png-family-crest-complete-soft-edge-128x140.png",
+    "sitemapSwitcher": false,
+    "siteUrl": false,
+    "sitemapSwitcherAuto": "on",
+    "robotsSwitcher": false,
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "mbrsiteDomain": "s2f4rins0z",
+    "canonical-url": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 13,
+    "versionPublish": "5.3.10"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Massage-Terapeuten.se",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "h1.mbr-section-title": {
+              "letter-spacing": ".2em"
+            },
+            "& when (@showSubtitle), (@showText)": {
+              ".mbr-section-title": {
+                "padding-bottom": "1.5rem"
+              }
+            },
+            "& when (@showText)": {
+              ".mbr-section-subtitle": {
+                "padding-bottom": "1rem"
+              }
+            },
+            "& when (@showButtons)": {
+              ".title-wrap": {
+                "padding-bottom": "1.5rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#494949"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#000000"
+            }
+          },
+          "_name": "header1",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"11\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"11\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1285.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#767676\">\n        </fieldset>\n        \n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f7f7f7\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container align-left\">\n        <div class=\"title-wrap\" mbr-if=\"showTitle || showSubtitle || showText\">\n            <h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-bold mbr-black\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n                Massage Terapeuten<br>Reymond Gryveken<br><br><span style=\"font-weight: normal;\">Tel: 0141 216 177</span></h1>\n            <h2 class=\"mbr-section-subtitle align-center mbr-fonts-style \" mbr-theme-style=\"display-6\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\">\"Handen på en skicklig massör skall sänka sig lika mjukt på en smärtande nerv som daggen på gräset och lika tungt som en elefantfot på en förtorkad valk.\"</h2>\n            <p class=\"mbr-fonts-style mbr-text align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">- SKOTSK MASSÖR 1779-1839<br></p>\n        </div>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-7\"><a class=\"btn btn-lg btn-primary\" href=\"index.html#form3-a\" data-app-placeholder=\"Type Text\">Boka tid idag</a></div>\n    </div>\n</section>",
+          "_cid": "sCcORY6nc6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header1-2"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            "& when (@showIcons)": {
+              ".card-img": {
+                "display": "flex",
+                "width": "calc(2rem ~\"+ @{iconsSize}rem\")",
+                ".icon-wrap": {
+                  "background-color": "@iconsBg",
+                  "height": "calc(2rem ~\"+ @{iconsSize}rem\")",
+                  ".mbr-iconfont": {
+                    "color": "@iconsColor",
+                    "font-size": "~\"@{iconsSize}rem\""
+                  }
+                }
+              }
+            },
+            ".list-item:hover": {
+              ".icon-wrap": {
+                "-webkit-transform": "scale(1.1, 1.1)",
+                "transform": "scale(1.1, 1.1)"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#494949"
+            }
+          },
+          "_name": "features4",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features4\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"6\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Item Title\" name=\"showItemTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Item Text\" name=\"showItemText\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1.6\" max=\"5\" step=\"0.2\" value=\"1.6\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#ffffff\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons BG Color\" name=\"iconsBg\" value=\"#bee0c7\" condition=\"showIcons\">\n            \n        \n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f6efe9\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Med</h4>\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-black mbr-bold align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title \">\n                         40 år erfarenhet!</h3>\n                    <p class=\"mbr-fonts-style general-text mbr-text main-text align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".main-text\">\n                        Jag har 40 år erfarenhet av att jobba som massageterapeut med flera gedigna utbildningar vilket gör att du alltid är i trygga händer hos mig.\n                    </p>\n                    <div mbr-list mbr-list-grow=\"itemsCount\" class=\"list-wrap d-flex mbr-justify-content-center\">\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-heartbeat fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper  mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-7\">\n                                    Massage</h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit!\n                                </p>\n                            </div>\n                        </div>\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa fa-stethoscope fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-7\"><p>Muskulering</p></h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit!\n                                </p>\n                            </div>\n                        </div>\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-user-plus fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-7\">Myofaciala triggerpunkter</h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit!\n                                </p>\n                            </div>\n                        </div> \n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-heart fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-7\">Djupverkande cirkulationsmassage</h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit!\n                                </p>\n                            </div>\n                        </div>\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-male fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-7\">Ledmobilizering</h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit!\n                                </p>\n                            </div>\n                        </div>\n                        <div class=\"list-item d-flex mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-img mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"mbr-iconfont fa-gittip fa\"></span>\n                                </div>\n                            </div>\n                            <div class=\"content-wrapper mbr-justify-content-center\">\n                                <h4 class=\"item-title item-title-margin mbr-fonts-style mbr-black mbr-semibold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-7\">Fotzonsterapi</h4> \n                                <p class=\"item-text mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showItemText\" data-app-selector=\".item-text\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit!\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sCcQ9whESJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "features4-4"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bg",
+            "& when (@bgFigures)": {
+              ".figure": {
+                "background-color": "@figureColor"
+              },
+              "& when (@figure = '1')": {
+                ".figure": {
+                  "width": "(@circleRadius * 1px)",
+                  "height": "(@circleRadius * 1px)",
+                  "border-radius": "50%",
+                  "position": "absolute",
+                  "top": "(@circlePosY * 1%)",
+                  "left": "(@circlePosX * 1%)"
+                },
+                "& when (@overflow)": {
+                  "overflow": "hidden"
+                }
+              },
+              "& when (@figure = '2')": {
+                ".figure": {
+                  "position": "absolute",
+                  "& when not (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  },
+                  "& when (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "bottom": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when (@directRect) and not (@invertRect)": {
+                    "left": "0",
+                    "top": "0",
+                    "width": "100%",
+                    "height": "(@sizeRect * 1%)"
+                  },
+                  "& when not (@directRect) and (@invertRect)": {
+                    "right": "0",
+                    "top": "0",
+                    "width": "(@sizeRect * 1%)",
+                    "height": "100%"
+                  }
+                }
+              },
+              "& when (@figure = '3')": {
+                ".figure": {
+                  "background": "linear-gradient(@rotateAngle * 1deg, @figureColor (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) (@sizeDiagonal * 1%), rgba(0, 0, 0, 0) 100%)",
+                  "position": "absolute",
+                  "left": "0",
+                  "top": "0",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".btn": {
+              "margin-left": "0"
+            },
+            "& when (@flexDirection)": {
+              ".main-row": {
+                "-webkit-flex-direction": "row-reverse",
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".img-col": {
+                "-webkit-order": "10",
+                "order": "10",
+                "margin-top": "2.5rem"
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".btn": {
+                "margin-left": "0.8rem"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            }
+          },
+          "_name": "features5",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features5\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"8\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"8\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <!-- Background -->\n        <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Show BG Figures\" name=\"bgFigures\" checked>\n\n        <!-- Select Figure -->\n        <select title=\"Select Figure:\" name=\"figure\" condition=\"bgFigures\">\n            <option value=\"1\">Circle</option>\n            <option value=\"2\" selected>Rectangle</option>\n            <option value=\"3\">Diagonal</option>\n        </select>\n        \n        <!-- Figure Circle -->\n        <input type=\"range\" inline title=\"Circle X\" name=\"circlePosX\" min=\"-100\" max=\"100\" step=\"5\" value=\"-40\" condition=\"figure==1 && bgFigures\">\n        <input type=\"range\" inline title=\"Circle Y\" name=\"circlePosY\" min=\"-100\" max=\"100\" step=\"5\" value=\"40\" condition=\"figure==1 && bgFigures\">\n        <input type=\"range\" inline title=\"Circle Radius\" name=\"circleRadius\" min=\"100\" max=\"1600\" step=\"50\" value=\"1200\" condition=\"figure==1 && bgFigures\">\n        <input type=\"checkbox\" title=\"Overflow Hidden\" name=\"overflow\" condition=\"figure==1 && bgFigures\" checked>\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Rectangle -->\n        <input type=\"checkbox\" title=\"Width/Height\" name=\"directRect\" condition=\"figure==2 && bgFigures\">\n        <input type=\"checkbox\" title=\"Invert\" name=\"invertRect\" condition=\"figure==2 && bgFigures\" checked>\n        <input type=\"range\" inline title=\"Size\" name=\"sizeRect\" min=\"0\" max=\"100\" step=\"5\" value=\"35\" condition=\"figure==2 && bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n\n        <!-- Figure Diagonal -->\n        <input type=\"range\" inline title=\"Rotate Angle\" name=\"rotateAngle\" min=\"0\" max=\"360\" step=\"5\" value=\"45\" condition=\"figure==3 && bgFigures\">\n        <input type=\"range\" inline title=\"Size\" name=\"sizeDiagonal\" min=\"0\" max=\"100\" step=\"5\" value=\"50\" condition=\"figure==3 && bgFigures\">\n        <input type=\"color\" title=\"Figure Color\" name=\"figureColor\" value=\"#bee0c7\" condition=\"bgFigures\">\n        \n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"figure\" mbr-if=\"bgFigures\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\" img-col mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                        <div class=\"image-block-border d-flex mbr-justify-content-center\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/img-20180726-171618-1043x1005.png\" layout=\"responsive\" width=\"521.8082298507463\" height=\"502.797\" alt=\"Mobirise\">\n                                <div placeholder class=\"placeholder\"></div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/img-20180726-171618-1043x1005.png\" alt=\"Mobirise\" data-aspectratio=\"0.6666666666666666\">\n                            </amp-img>\n                        </div>\n                    </div>\n            <div class=\"text-block d-flex mbr-align-items-center mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Mina</h4>\n                    <h3 class=\"mbr-section-title align-left mbr-fonts-style mbr-black mbr-bold\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        Utbildningar!</h3>\n                    <p class=\"mbr-fonts-style general-text align-left mbr-text main-text\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".main-text, .mbr-section-btn\"><b>Diplomerad Zonterapeut</b> | Axelsons Gymnastiska Institut\n<br><b>Aromatisk Oljemassage</b> | Axelsons Gymnastiska Institut\n<br><b>Grundkurs i Massage</b> |&nbsp;Axelsons Gymnastiska Institut\n<br><b>Fortsättningskurs i Massage </b>| Axelsons Gymnastiska Institut\n<br><b>Avancerad kurs i Massage</b> | Axelsons Gymnastiska Institut\n<br><b>Grundkurs i Ledmobilisering</b> | Ackermann Collage of Chiropraktik\n<br><b>Påbyggnadskurs i Ledmobilisering</b> | Ackermann Collage of Chiropraktik\n<br><b>Fysiologisk Kinesologi </b>|&nbsp;Svenska Kinesologi Skolan\n<br><b>Myofaciala Triggerpunkter </b>| Tore Näsman (Dåvarande rektor Naprapathögskolan)\n<br><b>Manuell Lymfdränage</b> |&nbsp;Inga Ohrt Leg.Läk.\n<br><b>Cirkulationsmassage</b> |&nbsp;Sven Lundin i Ljusdal\n<br><b>Chakraflödesmassage</b> | Sofia Norelius (Stockholm)\n<br><b>Chakrabalansering</b> |&nbsp;Sofia Norelius (Stockholm)</p>\n                    <div mbr-buttons class=\"mbr-section-btn\" mbr-theme-style=\"display-6\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-primary\" href=\"index.html#form3-a\" data-app-placeholder=\"Type Text\">Boka tid idag</a></div> \n                </div>\n            </div>\n        </div>\n    </div> \n</section>",
+          "_cid": "sCcSkTARNN",
+          "_anchor": "features5-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-figure": {
+              "float": "left",
+              "& when (@reverseContent)": {
+                "float": "right"
+              },
+              ".img-subtitle": {
+                "margin-top": ".6rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".mbr-figure": {
+                "margin-right": "3rem",
+                "width": "~\"@{mediaSize}%\"",
+                "& when (@reverseContent)": {
+                  "margin-right": "0",
+                  "margin-left": "3rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "padding": "0"
+            },
+            ".img-subtitle": {
+              "color": "#7f7e7e"
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "width": "100% !important",
+                "padding-bottom": "1rem"
+              }
+            }
+          },
+          "_name": "content1",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"content1\" group=\"Article\" plugins=\"amp-main\">\n          \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->   \n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"20\" max=\"80\" step=\"5\" value=\"20\">\n        <input type=\"checkbox\" title=\"Image Subtitle\" name=\"imageSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Image on left/right\" name=\"reverseContent\">\n        <input type=\"color\" title=\"BG Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-8\">\n                <div class=\"mbr-figure\">\n                    <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/mbr-292x206.jpg\" layout=\"responsive\" width=\"146.24380582524273\" height=\"103.172\" alt=\"Mobirise\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/mbr-292x206.jpg\" alt=\"Mobirise\" data-aspectratio=\"0.6635514018691588\">\n                    </amp-img>\n                    <div mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style img-subtitle align-center\" data-app-selector=\".img-subtitle\" mbr-if=\"imageSubtitle\"></div>\n                </div>\n                <div class=\"media-content\">\n                    <p class=\"mbr-text align-left mb-0 mbr-fonts-style mbr-black\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"><b>Massage är en av de</b>&nbsp;äldsta behandlingsformer som finns idag och har funnits i flera tusen år. I österlandet ser man det som en naturlig del av livet att regelbundet få massage i alla åldrar.\n<br>\n<br>Ordet masso kommer från Grekland och betyder just: jag knådar. I det antika Grekland och Rom var massage ett av de viktigaste sätten för läkare att lindra och läka smärta.\n<br>\n<br>Per Henrik Ling var den som förde massagen till Sverige i början av 1800-talet. Han vidareutvecklade massagen med sina kunskaper från gymnastiken, fysiologiska och olika österländska tekniker.\n<br>\n<br>Det som idag kallas för Svensk klassisk massage är välkänd för sin terapeutiska verkan.</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sCcTpEH2sL",
+          "_anchor": "content1-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "h4.item-title": {
+              "margin": "auto"
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".card-wrapper": {
+              "padding": "2.5rem 1.875rem",
+              "background-color": "@cardsBg",
+              "border-radius": "45px 0 45px 45px",
+              "margin-bottom": "1.25rem",
+              "width": "100%",
+              "transition": "all .3s"
+            },
+            ".card-wrapper:hover": {
+              "box-shadow": "0 12px 16px 0 rgba(39, 39, 47, 0.06)"
+            },
+            "p.item-text": {
+              "margin-bottom": "1.2rem"
+            },
+            "& when (@showPhoto)": {
+              "amp-img": {
+                "border-radius": "100%",
+                "height": "5rem",
+                "width": "5rem",
+                "overflow": "hidden",
+                "z-index": "100"
+              },
+              ".card-img": {
+                "margin-bottom": "1.5625rem"
+              }
+            },
+            ".card-text": {
+              "margin-bottom": "2rem"
+            },
+            "@media (max-width: 991px)": {
+              "div.list-item > .card-img": {
+                "width": "50%"
+              }
+            },
+            "@media (max-width: 540px)": {
+              "div.list-item > .card-img": {
+                "width": "85%"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            }
+          },
+          "_name": "features9",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features9\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"5\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"range\" inline title=\"Card Count\" name=\"cardCount\" min=\"1\" max=\"3\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Show Photo\" name=\"showPhoto\">\n        <input type=\"checkbox\" title=\"Show Card Text\" name=\"showCardText\" checked>\n        <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n        <input type=\"checkbox\" title=\"Show Role\" name=\"showRole\">\n        <input type=\"color\" title=\"Cards BG Color\" name=\"cardsBg\" value=\"#f5f6fb\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#FFFFFF\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center \" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Mina</h4>\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-black mbr-bold align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title \">Kundberättelser!</h3>\n                    <p class=\"mbr-fonts-style general-text align-center mbr-semibold align-center\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".general-text\">\n                        Boka ditt besök idag och testa själv. Kanske är du nästa person som lämnar din kundberättelse.\n                    </p>\n                    <div mbr-list mbr-list-grow=\"cardCount\" class=\"list-wrap d-flex mbr-justify-content-center \">\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-wrapper\">\n                                <div class=\"card-img d-flex mbr-justify-content-center\" mbr-if=\"showPhoto\">\n                                    <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/face5.jpg\" layout=\"responsive\" width=\"80\" height=\"80\" alt=\"Mobirise\" mbr-if=\"showPhoto\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face5.jpg\" alt=\"Mobirise\">\n                                    </amp-img>\n                                </div>\n                                <p class=\"card-text mbr-italic mbr-fonts-style main-text align-center\" mbr-if=\"showCardText\" mbr-theme-style=\"display-7\" data-app-selector=\".main-text\"><p>“Jag hade värk från axel ned mot armen och efter tre gånger så var det bra! Jag går nu en gång i månaden för jag tycker det är skönt att få massage! Han är jäkligt bra att hitta alla knutar!”</p></p>\n                                <div class=\"id-wrapper\">\n                                    <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showName\" mbr-theme-style=\"display-6\">\n                                        Roger</h4> \n                                    <p class=\"item-text mbr-italic mbr-text align-center  mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".item-text\">\n                                        Cook\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-wrapper\">\n                                <div class=\"card-img d-flex mbr-justify-content-center \" mbr-if=\"showPhoto\">\n                                    <amp-img class=\"mobirise-loader\" mbr-if=\"showPhoto\" src=\"@PROJECT_PATH@/assets/images/face6.jpg\" layout=\"responsive\" width=\"80\" height=\"80\" alt=\"Mobirise\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face6.jpg\" alt=\"Mobirise\">\n                                    </amp-img>\n                                </div>\n                                <p class=\"card-text mbr-italic mbr-fonts-style main-text align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\" data-app-selector=\".main-text\">“Efter många år av värk i nacke och mycket huvudvärk så har Reymond genom sin behandling fått mig smärtfri . <br><br>Det är värt mycket.”</p>\n                                <div class=\"id-wrapper\">\n                                    <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showName\" mbr-theme-style=\"display-6\">\n                                        Marie</h4> \n                                    <p class=\"item-text mbr-italic align-center mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".item-text\">\n                                        Seller\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-wrapper\">\n                                <div class=\"card-img d-flex mbr-justify-content-center \" mbr-if=\"showPhoto\">\n                                    <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/face7.jpg\" mbr-if=\"showPhoto\" layout=\"responsive\" width=\"80\" height=\"80\" alt=\"Mobirise\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face7.jpg\" alt=\"Mobirise\">\n                                    </amp-img>\n                                </div>\n                                <p class=\"card-text mbr-italic mbr-fonts-style main-text align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\" data-app-selector=\".main-text\">“Jag har haft olika problem med värk i min kropp och prövat olika typer av massage/behandling.\n<br>Den massage jag fått hos Reymond har gjort mej besvärsfri. Kan rekommendera detta.”</p>\n                                <div class=\"id-wrapper \">\n                                    <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showName\" mbr-theme-style=\"display-6\">\n                                        Ann-Kathrine</h4> \n                                    <p class=\"item-text mbr-italic align-center mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".item-text\">\n                                        Manager\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n        </div>\n    </div>\n</section>",
+          "_cid": "sCcUg2eM3A",
+          "_anchor": "features9-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "h4.item-title": {
+              "margin": "auto"
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".card-wrapper": {
+              "padding": "2.5rem 1.875rem",
+              "background-color": "@cardsBg",
+              "border-radius": "45px 0 45px 45px",
+              "margin-bottom": "1.25rem",
+              "width": "100%",
+              "transition": "all .3s"
+            },
+            ".card-wrapper:hover": {
+              "box-shadow": "0 12px 16px 0 rgba(39, 39, 47, 0.06)"
+            },
+            "p.item-text": {
+              "margin-bottom": "1.2rem"
+            },
+            "& when (@showPhoto)": {
+              "amp-img": {
+                "border-radius": "100%",
+                "height": "5rem",
+                "width": "5rem",
+                "overflow": "hidden",
+                "z-index": "100"
+              },
+              ".card-img": {
+                "margin-bottom": "1.5625rem"
+              }
+            },
+            ".card-text": {
+              "margin-bottom": "2rem"
+            },
+            "@media (max-width: 991px)": {
+              "div.list-item > .card-img": {
+                "width": "50%"
+              }
+            },
+            "@media (max-width: 540px)": {
+              "div.list-item > .card-img": {
+                "width": "85%"
+              }
+            }
+          },
+          "_name": "features9",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"features9\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"5\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"range\" inline title=\"Card Count\" name=\"cardCount\" min=\"1\" max=\"3\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Show Photo\" name=\"showPhoto\">\n        <input type=\"checkbox\" title=\"Show Card Text\" name=\"showCardText\" checked>\n        <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n        <input type=\"checkbox\" title=\"Show Role\" name=\"showRole\">\n        <input type=\"color\" title=\"Cards BG Color\" name=\"cardsBg\" value=\"#f5f6fb\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#FFFFFF\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center \" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Fresh Food\n                    </h4>\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-black mbr-bold align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title \">\n                        Our Vegan Shop!\n                    </h3>\n                    <p class=\"mbr-fonts-style general-text align-center mbr-semibold align-center\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".general-text\">\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, odit, iusto? Officia praesentium voluptate suscipit accusantium odit.\n                    </p>\n                    <div mbr-list mbr-list-grow=\"cardCount\" class=\"list-wrap d-flex mbr-justify-content-center \">\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-wrapper\">\n                                <div class=\"card-img d-flex mbr-justify-content-center\" mbr-if=\"showPhoto\">\n                                    <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/face5.jpg\" layout=\"responsive\" width=\"80\" height=\"80\" alt=\"Mobirise\" mbr-if=\"showPhoto\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face5.jpg\" alt=\"Mobirise\">\n                                    </amp-img>\n                                </div>\n                                <p class=\"card-text mbr-italic mbr-fonts-style main-text align-center\" mbr-if=\"showCardText\" mbr-theme-style=\"display-7\" data-app-selector=\".main-text\">\"Efter stora besvär med Ischias över ett år och ingen hjälp fanns att få genom sjukvården  fick jag kontakt med Reymond som efter 5 behandlingar botade åkomman helt. \n<br>Har inte haft några känningar efter det, och ni som har problem med Ischias  så rekommenderar jag er att ta kontakt så kommer ni att slippa besvär i fortsättningen.\n<br>Jag går var fjortonde dag och får massage på hela kroppen som gör bara gott för kropp och själ.\"</p>\n                                <div class=\"id-wrapper\">\n                                    <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showName\" mbr-theme-style=\"display-6\">\n                                        Kenth</h4> \n                                    <p class=\"item-text mbr-italic mbr-text align-center  mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".item-text\">\n                                        Cook\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-wrapper\">\n                                <div class=\"card-img d-flex mbr-justify-content-center \" mbr-if=\"showPhoto\">\n                                    <amp-img class=\"mobirise-loader\" mbr-if=\"showPhoto\" src=\"@PROJECT_PATH@/assets/images/face6.jpg\" layout=\"responsive\" width=\"80\" height=\"80\" alt=\"Mobirise\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face6.jpg\" alt=\"Mobirise\">\n                                    </amp-img>\n                                </div>\n                                <p class=\"card-text mbr-italic mbr-fonts-style main-text align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\" data-app-selector=\".main-text\">\"Jag har varit kund hos Reymond i 33 år! Reymond har alltid hjälpt mig med knutor och värk i kroppen. Jag har besökt många massörer, men Reymond är absolut den bästa på att återställa min kropp i bästa skick igen!\n<br>\n<br>Jag är inte bosatt i Motala, men vid besök i Motala är det ett måste att få en genomgång hos Reymond, sedan är jag som ny igen!\"</p>\n                                <div class=\"id-wrapper\">\n                                    <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showName\" mbr-theme-style=\"display-6\">Anneli</h4> \n                                    <p class=\"item-text mbr-italic align-center mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".item-text\">\n                                        Seller\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center mbr-col-md-6 mbr-col-lg-4\">\n                            <div class=\"card-wrapper\">\n                                <div class=\"card-img d-flex mbr-justify-content-center \" mbr-if=\"showPhoto\">\n                                    <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/face7.jpg\" mbr-if=\"showPhoto\" layout=\"responsive\" width=\"80\" height=\"80\" alt=\"Mobirise\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/face7.jpg\" alt=\"Mobirise\">\n                                    </amp-img>\n                                </div>\n                                <p class=\"card-text mbr-italic mbr-fonts-style main-text align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\" data-app-selector=\".main-text\">\"Efter att jag fått min reumatiska diagnos samt genomgått allt vad vården har att erbjuda utan att bli kvitt min ständiga värk vände jag mig till Reymond. <br><br>Han har hjälpt mig att bli så mycket bättre än jag var innan. Han är en fantastisk massör med mycket kunskap och stor erfarenhet. <br><br>Jag rekommenderar honom varmt.\"</p>\n                                <div class=\"id-wrapper \">\n                                    <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showName\" mbr-theme-style=\"display-6\">\n                                        My</h4> \n                                    <p class=\"item-text mbr-italic align-center mbr-text mbr-fonts-style \" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".item-text\">\n                                        Manager\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n        </div>\n    </div>\n</section>",
+          "_cid": "sCcUR8q8LJ",
+          "_anchor": "features9-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".header-text": {
+              "margin-bottom": "3.5rem"
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".area": {
+              "padding": ".75rem .5rem",
+              "width": "100%",
+              "margin": "0"
+            },
+            "input, textarea, select": {
+              "background": "transparent",
+              "border": "1px solid #e5e6ec",
+              "border-radius": "6px",
+              "color": "#000000",
+              "width": "100%",
+              "margin": ".5rem"
+            },
+            ".top-text-areas": {
+              "display": "flex",
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "-webkit-align-items": "center",
+              "align-items": "center"
+            },
+            ".btn": {
+              "padding": "0.5625rem 2.125rem",
+              "margin": ".4rem .6rem"
+            },
+            "input": {
+              "font": "inherit",
+              "margin": "0.5rem"
+            },
+            ".fieldset .split-row": {
+              "width": "100%",
+              "display": "flex",
+              "-webkit-justify-content": "space-between",
+              "justify-content": "space-between",
+              "input": {
+                "width": "100%",
+                "&:nth-child(1)": {
+                  "margin-right": "1rem"
+                }
+              }
+            },
+            "textarea": {
+              "width": "100%",
+              "max-width": "100%",
+              "font": "inherit",
+              "margin": "0.5rem"
+            },
+            "@media (max-width: 1200px)": {
+              ".fieldset .split-row": {
+                "display": "flex",
+                "-webkit-flex-wrap": "wrap",
+                "flex-wrap": "wrap"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            }
+          },
+          "_name": "form3",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"form3\" group=\"Forms\" plugins=\"amp-main, amp-form, amp-mustache\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div mbr-form class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-8\">\n                    <div class=\"header-text\">\n                        <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center \" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                            Boka din tid idag för att</h4>\n                        <h3 class=\"mbr-section-title mbr-fonts-style mbr-black mbr-bold align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title \">\n                            Må bättre, ha mindre ont!</h3>\n                        <p class=\"mbr-fonts-style align-center mbr-text main-text mbr-semibold align-center\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".main-text\"><b>0141 216 177<br></b><i>(Använd i första hand ovan nummer)\n</i><br><b>072 744 21 61</b><br><i><br>Eller använd kontakt formuläret nedan så kontaktar jag dig så snart jag har möjighet.</i></p>\n                    </div>\n                <form class=\"mbr-form\" action=\"reymond_gryveken@hotmail.com\" method=\"post\" name=\"Mobirise Form\" target=\"_top\" novalidate>\n                    <div class=\"mbr-row\">\n                      <div submit-success class=\"mbr-col-sm-12 mbr-col-md-12\">\n                          <template data-form-alert type=\"amp-mustache\">Tack för ditt meddelande.</template>\n                      </div>\n                      <div submit-error class=\"mbr-col-sm-12 mbr-col-md-12\">\n                          <template data-form-alert type=\"amp-mustache\">Tack för ditt meddelande.</template>\n                      </div>\n                    </div>\n                    <div class=\"mbr-row\">\n                        <div class=\"field mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\" data-for=\"form[data][0][1]\">\n                          <input type=\"hidden\" name=\"form[data][0][0]\" value=\"Name\">\n                          <input class=\"field-input\" type=\"text\" name=\"form[data][0][1]\" data-form-field=\"Name\" placeholder=\"Namn\" required>\n                        </div>\n                        <div class=\"field mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\" data-for=\"form[data][1][1]\">\n                          <input type=\"hidden\" name=\"form[data][1][0]\" value=\"Email\">\n                          <input class=\"field-input\" type=\"email\" name=\"form[data][1][1]\" data-form-field=\"Email\" placeholder=\"Epost\" required>\n                        </div>\n                        <div class=\"field mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\" data-for=\"form[data][2][1]\">\n                          <input type=\"hidden\" name=\"form[data][2][0]\" value=\"Phone\">\n                          <input class=\"field-input\" type=\"text\" min=\"{{minDate}}\" max=\"{{maxDate}}\" name=\"form[data][2][1]\" data-form-field=\"Phone\" placeholder=\"Telefonnummer\" value=\"{{minDate}}\" required>\n                        </div>\n                        <div class=\"field mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6\" data-for=\"form[data][3][1]\" hidden=\"hidden\">\n                          <input type=\"hidden\" name=\"form[data][3][0]\" value=\"Subject\">\n                          <input class=\"field-input\" type=\"text\" min=\"{{minTime}}\" max=\"{{maxTime}}\" step=\"{{60*timeStep}}\" name=\"form[data][3][1]\" data-form-field=\"Subject\" placeholder=\"Subject\" value=\"{{minTime}}\" required hidden=\"hidden\">\n                        </div>\n                        <div class=\"field mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\" data-for=\"form[data][4][1]\">\n                          <input type=\"hidden\" name=\"form[data][4][0]\" value=\"Message\">\n                          <textarea class=\"field-input\" name=\"form[data][4][1]\" rows=\"7\" data-form-field=\"Message\" placeholder=\"Meddelande\"></textarea>\n                        </div>\n                        <div mbr-buttons mbr-theme-style=\"display-6\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"field mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\"><a type=\"submit\" class=\"btn btn-lg btn-primary btn-form\" data-app-placeholder=\"Type Text\">Skicka</a></div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sCcVGYXr4m",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "form3-a"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "p.text-top": {
+              "margin-bottom": "1.25rem"
+            },
+            "div.item-icon": {
+              "margin-top": ".625rem"
+            },
+            "& when (@showIcons)": {
+              ".icon-wrap": {
+                "background-color": "@bgIcons",
+                "color": "@iconsColor",
+                "margin-right": "0.625rem",
+                "border-radius": "100%",
+                "width": "24px",
+                "height": "24px",
+                "font-size": ".75rem",
+                "padding": "0"
+              },
+              ".iconfont-wrapper": {
+                "display": "flex",
+                "width": ".75rem",
+                "height": ".75rem",
+                "-webkit-box-pack": "center",
+                "-ms-flex-pack": "center",
+                "justify-content": "center"
+              }
+            },
+            "& when not (@showIcons)": {
+              ".icon-wrap": {
+                "width": "auto",
+                "padding": "0"
+              }
+            },
+            "& when (@showTitle)": {
+              ".group-title": {
+                "padding-bottom": "0",
+                "margin-bottom": "2.5rem",
+                "padding-top": "0",
+                "color": "#ffffff"
+              },
+              "@media (max-width: 768px)": {
+                ".group-title": {
+                  "margin-bottom": "1.2rem"
+                }
+              }
+            },
+            ".items-col": {
+              "margin-bottom": "2.1875rem"
+            },
+            ".link": {
+              "transition": "all .5s"
+            },
+            ".link:hover": {
+              "padding-left": "5px",
+              "color": "#ffffff "
+            },
+            ".google-map": {
+              "height": "15rem",
+              "position": "relative",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                }
+              }
+            },
+            ".map-placeholder": {
+              "display": "none",
+              "h4": {
+                "padding-top": "5rem",
+                "color": "#767676",
+                "text-align": "center"
+              }
+            },
+            ".group-title": {
+              "color": "#494949"
+            },
+            ".item, .items": {
+              "color": "#494949"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "organicamp",
+          "_customHTML": "<section class=\"footer2, map\" group=\"Footers\" plugins=\"amp-main, amp-iframe\" global once=\"footer\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <select title=\"Columns\" name=\"columnsCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Column Title\" name=\"showTitle\" checked>\n        <input type=\"range\" inline title=\"Column 1 Items\" name=\"columnItems1\" min=\"1\" max=\"10\" value=\"3\">\n        <input type=\"range\" inline title=\"Column 2 Items\" name=\"columnItems2\" min=\"1\" max=\"10\" value=\"2\" condition=\"columnsCount > 1\">\n        <input type=\"range\" inline title=\"Column 3 Items\" name=\"columnItems3\" min=\"1\" max=\"10\" value=\"1\" condition=\"columnsCount > 2\">\n            \n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"color\" title=\"Icons Background Color\" name=\"bgIcons\" value=\"#ffffff\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#494949\" condition=\"showIcons\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"Bispmotalagatan 4\n591 35, Motala\" value=\"Bispmotalagatan 4\n591 35, Motala\"> \n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background6.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#bee0c7\" selected>\n        </fieldset>\n\n        \n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#464646\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"items-col mbr-col-sm-12\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-4':columnsCount==1,\n                             'mbr-col-md-4 mbr-col-lg-4':columnsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-3':columnsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-4':columnsCount==4}\">\n                <h3 class=\"mbr-fonts-style group-title mbr-white mbr-bold\" mbr-theme-style=\"display-6\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Kontaktuppgifter</h3>\n                <div class=\"items\">\n                    <p class=\"item text-top mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        Jag ser fram emot att träffa dig.</p>\n                    <div class=\"items-icon\" mbr-list mbr-list-grow=\"columnItems1\">\n                         <div class=\"item item-icon\">\n                             <div class=\"card-icon-text mbr-align-items-center d-flex\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap mbr-align-items-center d-flex mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                    <div class=\"iconfont-wrapper\">\n                                        <span mbr-icon class=\"mbr-iconfont fa-map-marker fa\" mbr-if=\"showIcons\"></span>\n                                    </div>\n                                </div>\n                                <p class=\"item mbr-text mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"https://g.page/massageterapeuten-i-motala?share\" class=\"text-white\" target=\"_blank\">Bispmotalagatan 4, Motala</a></p>\n                            </div>\n                         </div>\n                         <div class=\"item item-icon\">\n                             <div class=\"card-icon-text mbr-align-items-center d-flex\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap mbr-align-items-center d-flex mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                    <div class=\"iconfont-wrapper\">\n                                        <span mbr-icon class=\"mbr-iconfont fa-phone fa\" mbr-if=\"showIcons\"></span>\n                                    </div>\n                                </div>\n                                <p class=\"item mbr-text mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"tel:+46141216177\" class=\"text-white\">0141 216 177</a></p>\n                            </div>\n                         </div>\n                         <div class=\"item item-icon\">\n                             <div class=\"card-icon-text mbr-align-items-center d-flex\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap mbr-align-items-center d-flex mbr-justify-content-center\" mbr-if=\"showIcons\">\n                                    <div class=\"iconfont-wrapper\">\n                                        <span mbr-icon class=\"mbr-iconfont fa fa-paper-plane-o\" mbr-if=\"showIcons\"></span>\n                                    </div>\n                                </div>\n                                <p class=\"item mbr-text mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"mailto:mail@massage-terapeuten.se\" class=\"text-white\">mail@massage-terapeuten.se</a></p>\n                            </div>\n                         </div>\n                     </div>\n                </div>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-4':columnsCount==1,\n                             'mbr-col-md-4 mbr-col-lg-4':columnsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-3':columnsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-2':columnsCount==4}\" mbr-if=\"columnsCount > 1\">\n                <h3 class=\"mbr-fonts-style group-title mbr-white mbr-bold\" mbr-theme-style=\"display-6\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">Öppettider</h3>\n                <div class=\"items\" mbr-list mbr-list-grow=\"columnItems2\">\n                    <div class=\"time-work\">\n                        <p class=\" head-string mbr-fonts-style mbr-white\" mbr-theme-style=\"display-6\" data-app-selector=\".head-string\">\n                        Mån – Fre</p>\n                        <p class=\"item bottom-string mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        09:00 – 16:00</p>\n                    </div>\n                    <div class=\"time-work\">\n                        <p class=\" head-string mbr-fonts-style mbr-white\" mbr-theme-style=\"display-6\" data-app-selector=\".head-string\">\n                        Lör – Sön</p>\n                        <p class=\"item bottom-string mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items, \">Stängt</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-4':columnsCount==1,\n                             'mbr-col-md-4 mbr-col-lg-4':columnsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-3':columnsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-2':columnsCount==4}\" mbr-if=\"columnsCount > 2\">\n                <h3 class=\"mbr-fonts-style group-title mbr-white mbr-bold\" mbr-theme-style=\"display-6\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Kundberättelser</h3>\n                <div class=\"items links\" mbr-list mbr-list-grow=\"columnItems3\">\n                    <p class=\"link mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".link\">Maila din upplevelse till <a href=\"mailto:mail@massage-terapeuten.se\" class=\"text-white\">mail@massage-terapeuten.se</a></p>\n                    \n                    \n                    \n                    \n                </div>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-4':columnsCount==1,\n                             'mbr-col-md-4 mbr-col-lg-4':columnsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-3':columnsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-4':columnsCount==4}\" mbr-if=\"columnsCount > 3\">\n                <h3 class=\"mbr-fonts-style group-title mbr-white mbr-bold\" mbr-theme-style=\"display-6\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Hitta hit</h3>\n                <div class=\"items\">\n                    <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n                    <div class=\"map-placeholder mobirise-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sCcXzeJZJa",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {},
+          "_anchor": "footer2-c"
+        }
+      ]
+    }
+  }
+}
